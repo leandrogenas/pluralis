@@ -1,0 +1,64 @@
+{
+  "name": "@ldd/pluralis",
+  "version": "0.0.0-20240105",
+  "description": "Uma biblioteca que transforma palavras no singular em plural (PT-BR)",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "webpack serve --config webpack.config.demo.js",
+    "build": "webpack",
+    "build:demo": "webpack --config webpack.config.demo.js",
+    "test": "jest",
+    "prepare": "npm run build",
+    "trypublish": "npm publish || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leandrogenas/pluralis"
+  },
+  "author": "Leandro Augusto Fabri Pereira <eu@leand.pro> (https://leand.pro)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leandrogenas/pluralis/issues"
+  },
+  "homepage": "https://github.com/leandrogenas/pluralis",
+  "keywords": [
+    "library",
+    "lib",
+    "biblioteca",
+    "plural",
+    "português",
+    "brasil",
+    "brasileiro",
+    "palavras",
+    "es6"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/core": "^7.24.4",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.24.5",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^9.1.3",
+    "babel-preset-minify": "^0.5.2",
+    "css-loader": "^7.1.1",
+    "css-minimizer-webpack-plugin": "^6.0.0",
+    "eslint": "^9.1.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "jest": "^29.7.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.3",
+    "webpack-dev-server": "5.0.4"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/scripts/testMock.js",
+      "\\.(css|less)$": "<rootDir>/scripts/testMock.js"
+    }
+  }
+}
